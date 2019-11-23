@@ -1,34 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Impekable</title>
-        <meta name="description" content="This is my HTML5 boilerplate.">
+	<head>
+		<title>Impekable</title>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/screen.css">
-    </head>
-    <body>
-        <h1>
-            IMPEKABLE
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Invoices</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Chat Room</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </nav>
-        <h2>
-            Overview
-        </h2>
-    </body>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="description" content="This is my HTML5 boilerplate." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Styling -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/screen.css" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+
+		<!-- Scripting -->
+		<script src="./js/svgxuse.js"></script>
+	</head>
+	<body>
+		<div class="c-app">
+			<div class="c-app__logo">
+				<h1 class="c-logo">
+					IMPEKABLE
+				</h1>
+			</div>
+			<header class="c-app__topbar"></header>
+			<aside class="c-app__sidebar">
+				<nav class="c-main-nav">
+					<ul class="c-main-nav__list">
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_home"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Home</a>
+						</li>
+						<li class="c-main-nav__item is-selected">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_dashboard"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Dashboard</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_inbox"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Inbox</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_products"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Products</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_invoices"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Invoices</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_customers"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Customers</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Chat Room</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Calendar</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Help Center</a>
+						</li>
+						<li class="c-main-nav__item">
+							<svg class="c-main-nav__icon c-icon c-icon_home">
+								<use xlink:href="./img/icons/symbol-defs.svg#c-icon_settings"></use>
+							</svg>
+							<a class="c-main-nav__link" href="#">Settings</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="c-app__main">
+				<h2>
+					Overview
+				</h2>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt corporis similique, repellendus error quis saepe maxime fugit? Dolorum iusto ad temporibus similique,
+					corrupti vel repudiandae quaerat minus accusantium dolorem!
+				</p>
+			</main>
+		</div>
+
+		<!-- <svg class="icon c-icon_calendar"><use xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"></use></svg> -->
+	</body>
 </html>

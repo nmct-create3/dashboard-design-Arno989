@@ -7,20 +7,36 @@
 \*------------------------------------*/
 
 :root {
-    /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
+	/* colors */
+	--color-alpha-light-x: #f2f2f9;
+	--color-alpha-light: #a5a4bf;
+	--color-alpha: #a3a0fb;
+	--color-alpha-dark: #4c4b68;
+	--color-alpha-x-dark: #3b3b53;
 
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
+	--color-neutral-light: #ffffff;
+	--color-neutral-dark: #4d4f5c;
 
-    /* Shadows */
+	--color-white: #ffffff;
+	--color-red-light: #ff6565;
 
-    /* border radius */
+	/* Font weights */
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
 
-    /* transitions */
-    --transition-alpha: .1s;
+	/* Shadows */
+	--shadow-neutral: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+	/* border radius */
+
+	/* transitions */
+	--transition-alpha: 0.1s;
+
+	/* Grid system */
+	--global-baseline: 5px;
+
+	--layout-sidebar-width: 260px;
+	--layout-header-height: 70px;
 }
 
 /*------------------------------------*\
@@ -34,20 +50,20 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+	font-size: 15px;
+	line-height: 1.5;
+	font-family: Helvetica, arial, sans-serif;
+	color: var(--color-neutral-dark);
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-alpha-light-x);
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 /*
@@ -58,15 +74,15 @@ html {
 */
 
 ::-moz-selection {
-    background: var(--color-alpha);
-    color: white;
-    text-shadow: none;
+	background: var(--color-alpha);
+	color: white;
+	text-shadow: none;
 }
 
 ::selection {
-    background: var(--color-alpha);
-    color: white;
-    text-shadow: none;
+	background: var(--color-alpha);
+	color: white;
+	text-shadow: none;
 }
 
 /*------------------------------------*\
@@ -80,8 +96,8 @@ Default markup for images to make them responsive
 */
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+	max-width: 100%;
+	vertical-align: top;
 }
 
 /*
@@ -93,34 +109,34 @@ img {
 h1,
 h2,
 h3 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+	font-size: 36px;
+	line-height: 48px;
+	margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+	font-size: 32px;
+	line-height: 40px;
+	margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+	font-size: 26px;
+	line-height: 32px;
+	margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 24px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	margin: 0 0 24px;
 }
 
 p,
@@ -130,74 +146,74 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+	margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+	padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 blockquote {
-    font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+	font-style: normal;
+	font-size: 23px;
+	line-height: 32px;
+	margin: 0 0 24px;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 figcaption {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 8px;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+	border: 0;
+	height: 1px;
+	background: LightGrey;
+	margin: 0 0 24px;
 }
 
 a {
-    transition: all var(--transition-alpha);
-    color: var(--color-alpha);
-    outline-color: var(--color-alpha);
-    outline-width: medium;
-    outline-offset: 2px;
+	transition: all var(--transition-alpha);
+	color: var(--color-alpha);
+	outline-color: var(--color-alpha);
+	outline-width: medium;
+	outline-offset: 2px;
 }
 
 a:visited,
 a:active {
-    color: var(--color-alpha);
+	color: var(--color-alpha);
 }
 
 a:hover,
 a:focus {
-    color: var(--color-alpha-light);
+	color: var(--color-alpha-light);
 }
 
 label,
 input {
-    display: block;
+	display: block;
 }
 
 select {
-    width: 100%;
+	width: 100%;
 }
 
 input::placeholder {
-    color: var(--color-neutral-light);
+	color: var(--color-neutral-light);
 }
 
 /*------------------------------------*\
@@ -211,8 +227,8 @@ input::placeholder {
 */
 
 .o-row {
-    position: relative;
-    padding: 24px 24px 0;
+	position: relative;
+	padding: 24px 24px 0;
 }
 
 /*
@@ -222,10 +238,10 @@ input::placeholder {
 */
 
 .o-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
-    width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 79.5em; /* 79.5 * 16px = 1272 */
+	width: 100%;
 }
 
 /*
@@ -235,8 +251,8 @@ input::placeholder {
 */
 
 .o-list {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 /*
@@ -246,26 +262,26 @@ input::placeholder {
 */
 
 .o-button-reset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
 
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
 
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
 
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
 
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
 }
 
 /*
@@ -275,14 +291,14 @@ input::placeholder {
 */
 
 .o-hide-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 /*------------------------------------*\
@@ -290,10 +306,150 @@ input::placeholder {
 \*------------------------------------*/
 
 /*
+    Component: App
+    ---
+    Website main layout
+*/
+.c-app {
+	min-height: 100vh;
+}
+
+.c-app__logo {
+	display: flex;
+	align-items: center;
+	padding: calc(var(--global-baseline) * 5) calc(var(--global-baseline) * 4);
+	background: var(--color-alpha-x-dark);
+}
+
+.c-app__topbar {
+	display: none;
+	background-color: var(--color-neutral-light);
+	box-shadow: var(--shadow-neutral);
+}
+
+.c-app__sidebar {
+	display: none;
+	background: var(--color-alpha-dark);
+}
+
+.c-app__main {
+}
+
+@media screen and (min-width: 960px) {
+	.c-app {
+		display: grid;
+		grid-template-columns: var(--layout-sidebar-width) 1fr;
+		grid-template-rows: var(--layout-header-height) 1fr;
+    }
+    
+    .c-app__logo {
+        padding: 0 calc(var(--global-baseline) * 4)
+    }
+
+	.c-app__sidebar,
+	.c-app__topbar {
+		display: block;
+	}
+
+	.c-app__sidebar,
+	.c-app__main {
+		height: calc(100vh - var(--layout-header-height));
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scroll-behavior: 0;
+	}
+}
+
+@media (min-height: 612px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+/*
     Component: Logo
     ---
     Website main logo
 */
+
+.c-logo {
+	margin: 0;
+
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--color-neutral-light);
+	line-height: calc(var(--global-baseline) * 4);
+	font-size: 1rem;
+}
+
+/*
+    Component: icon
+    ---
+    Website icon
+*/
+
+.c-icon {
+	height: 1rem;
+	width: 1rem;
+}
+
+/*
+    Component: nav
+    ---
+    Website nav
+*/
+
+.c-main-nav {
+	position: fixed;
+	scroll-behavior: auto;
+}
+
+.c-main-nav__list {
+	margin: 0;
+	padding: 0;
+}
+
+.c-main-nav__item {
+	display: flex;
+	align-items: center;
+	padding: calc(var(--global-baseline) * 3) calc(var(--global-baseline) * 4);
+	border-left: var(--global-baseline) solid transparent;
+
+	transition-duration: 600ms;
+	transition-timing-function: ease-out;
+	transition-property: border-color, background;
+
+	cursor: pointer;
+}
+
+.c-main-nav__item.is-selected,
+.c-main-nav__item:hover {
+	background: var(--color-alpha-x-dark);
+	border-left: var(--global-baseline) solid var(--color-alpha);
+}
+
+.c-main-nav__link {
+	margin-left: calc(var(--global-baseline) * 2);
+
+	color: var(--color-neutral-light);
+	font-size: 15px;
+	line-height: 25px;
+
+	text-decoration: none;
+}
+
+.c-main-nav__link:visited {
+	color: var(--color-neutral-light);
+}
+
+.c-main-nav__icon {
+	fill: var(--color-alpha-light);
+}
+
+.c-main-nav__item.is-selected .c-main-nav__icon,
+.c-main-nav__item:hover .c-main-nav__icon {
+	fill: var(--color-alpha);
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -306,11 +462,11 @@ input::placeholder {
 */
 
 .u-color-neutral {
-    color: var(--color-neutral);
+	color: var(--color-neutral);
 }
 
 .u-color-neutral-dark {
-    color: var(--color-neutral-dark);
+	color: var(--color-neutral-dark);
 }
 
 /*
@@ -320,31 +476,31 @@ input::placeholder {
 */
 
 .u-pt-clear {
-    padding-top: 0 !important;
+	padding-top: 0 !important;
 }
 
 .u-mb-clear {
-    margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .u-mb-xs {
-    margin-bottom: 4px !important;
+	margin-bottom: 4px !important;
 }
 
 .u-mb-sm {
-    margin-bottom: 8px !important;
+	margin-bottom: 8px !important;
 }
 
 .u-mb-md {
-    margin-bottom: 16px !important;
+	margin-bottom: 16px !important;
 }
 
 .u-mb-lg {
-    margin-bottom: 32px !important;
+	margin-bottom: 32px !important;
 }
 
 .u-mb-xl {
-    margin-bottom: 48px !important;
+	margin-bottom: 48px !important;
 }
 
 /*
@@ -354,25 +510,24 @@ input::placeholder {
 */
 
 .u-max-width-xs {
-    max-width: 27em !important;
+	max-width: 27em !important;
 }
 
 .u-max-width-sm {
-    max-width: 39em !important;
+	max-width: 39em !important;
 }
 
 .u-max-width-md {
-    max-width: 50em !important;
+	max-width: 50em !important;
 }
 
 .u-max-width-lg {
-    max-width: 63.5em !important;
+	max-width: 63.5em !important;
 }
 
 .u-max-width-none {
-    max-width: none !important;
+	max-width: none !important;
 }
-
 
 /*
     Utilities: align
@@ -381,11 +536,11 @@ input::placeholder {
 */
 
 .u-align-text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .u-align-center {
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 /*
@@ -394,7 +549,7 @@ input::placeholder {
 */
 
 .u-text-sm {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 /*------------------------------------*\
@@ -437,61 +592,61 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		/* Black prints faster:
         http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: ' (' attr(href) ')';
+	}
+	abbr[title]:after {
+		content: ' (' attr(title) ')';
+	}
+	/*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+	a[href^='#']:after,
+	a[href^='javascript:']:after {
+		content: '';
+	}
+	pre {
+		white-space: pre-wrap !important;
+	}
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	/*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+	thead {
+		display: table-header-group;
+	}
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
 }
